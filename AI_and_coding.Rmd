@@ -1,0 +1,287 @@
+---
+title: "AI and Coding"
+output: html_notebook
+---
+
+```{r}
+library(Gviz)
+library(ggplot2)
+library(biomaRt)
+library(TxDb.Hsapiens.UCSC.hg38.knownGene)
+```
+
+# Coding in R with Copilot Prompt
+
+Learn how to use Copilot to write, debug, and understand R code through prompt-based interactions.
+Make sure you have access to Copilot and RStudio.
+
+## Basic R Coding with Prompts
+
+We can use Copilot to helps us write very simple pieces of code, to complex functions and loops, and even entire computer programs!
+
+Copilot Prompt: "Write R code to create a numeric vector with the values 2, 4, 6, 8."
+```{r}
+
+```
+
+Print the result
+```{r}
+
+```
+
+Copilot Prompt: "Write R code to convert 35 degrees centigrade to Fahrenheit."
+```{r}
+
+```
+
+Print the result
+```{r}
+
+```
+
+
+## Advanced R Coding with Prompts
+
+Copilot Prompt: "Write a loop in R to add 2 two every value"
+```{r}
+
+
+```
+
+Copilot Prompt: "Explain how the loop works"
+
+Q. Write the explanation of how the loop works.
+Copilot can also be used to help you understand how code works!
+
+Q. Why do we use loops in programming? ask Copilot!
+
+We can also use Copilot to help us write functions in R.
+
+Copilot Prompt: "Can you provide an example of a function in R"
+```{r}
+
+
+```
+
+Copilot Prompt: "Can you give me a function in that squares a list of numbers"
+```{r}
+
+```
+
+Q. What is a function ? Why use functions in programming?
+
+
+Q. Have a go at asking Copilot to write a function of you choosing. what did you come up with?
+```{r}
+
+```
+
+
+
+# Working with dataframes in R
+
+Copilot Prompt: "Create a data frame in R with columns 'Name', 'Age', and 'Score' using sample data."
+```{r}
+
+```
+
+Copilot Prompt: "Save the dataframe to a .csv file in r"
+```{r}
+
+```
+it's useful to be able to export data to say an Excel file for ease of viewing.
+
+Copilot Prompt: "How do I install the package ggplot2 in R"
+```{r}
+#install package:
+
+```
+
+Copilot Prompt: "How do I load the package ggplot2 in R"
+```{r}
+#load ggplot2 package:
+
+```
+
+Copilot Prompt: "Use ggplot2 to create a bar chart of scores by name."
+```{r}
+
+```
+
+Copilot Prompt: "Add labels to each bars"
+
+```{r}
+
+```
+
+Copilot Prompt: "Export as a JPEG file"
+```{r}
+
+```
+
+
+Copilot Prompt: "Export as a high resolution publication quality TIFF file"
+```{r}
+
+```
+
+
+
+# Mini-Porject: How to use copilot for AI assisted data analysis in R 
+
+## Load the Dataset
+
+Copilot Prompt:"Write R code to load and preview the iris dataset."
+
+```{r}
+
+```
+
+ask Copilot how to check the structure of the data
+```{r}
+
+```
+
+ask Copilot how to explore the data
+
+
+## Summary Statistics 
+
+Copilot Prompt: "Generate summary statistics for each variable in the iris data set."
+
+```{r}
+
+```
+
+## Visualize the Data
+
+The following code has been given to you to create a scatter plot comparing Sepal.Length and Petal.Length by species, but it has errors!!!!!, ask copilot nicely to review and fix the code for you:
+
+```{r}
+# Load necessary library
+library(ggplot)
+
+# Load the iris dataset
+data(iris)
+
+# Create scatter plot
+ggplot(iris, aes(x = SepalLength, y = Petal.Length, color = Species)) +  
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Sepal Length vs Petal Length by Species",
+    x = "Sepal Length (cm)",
+    y = "Petal Length (cm)",
+    color = "Species"
+  ) +
+  theme_minimal()
+
+```
+
+Enter the correct working code here:
+
+```{r}
+
+```
+
+
+Now violin plots are currently very fashionable at the moment in biosciences. Ask copilot to show the code to help you draw a violin plot of the petal length for the different species.
+```{r}
+
+```
+
+
+and a box-plot ?
+```{r}
+
+```
+
+
+
+## Build a Simple Model
+
+We can perform statistical modelling on our data set and use Copilot to help us perform the analysis and understand what the output signifies.
+
+Copilot Prompt: "Fit a linear regression model predicting Petal.Length using Sepal.Length and Species."
+```{r}
+
+```
+
+## Get an Explanation of the Model Output
+
+Ask Copilot to explain the output to you.
+Is it a good model? is it significant? are Species and Sepal.Length are strong predictors of Petal.Length ?
+
+## Visualise the Model
+
+Ask Copilot to write the code to visualize regression by species and paste the code here:
+
+```{r}
+
+```
+
+Ask Copilot to help you add confidence bands to the plot
+
+```{r}
+
+```
+
+# Mini-Porject: Analysis of gene expression data
+
+Import the expression data (expression_data.csv)
+
+```{r}
+
+```
+
+View the imported data frame
+```{r}
+
+```
+
+Q. How is the data structured?
+
+
+Perform a t-test on all of the genes, comparing the two groups (SampleA	SampleB	SampleC	SampleD	SampleE	SampleF
+ VERSUS SampleG	SampleH	SampleI	SampleJ	SampleK	SampleL)
+ 
+ fix any errors as you go along, ask Copilot to fix any errors!
+
+```{r}
+
+```
+
+Q. Are there any significant genes identified in the analysis ??
+
+Q. Can you draw a box-plot of the result? 
+
+# Mini-Porject: Use copilot to help draw ADAMTS3 gene schematic using Gviz
+
+You may need to go through a few iterations to get the final product, and fix a few errors along the way.
+if you have any errors, ask copilot to fix them for you!
+
+```{r}
+
+```
+
+Q. What other pieces of information can you add to your track?
+
+Q. Export your plot to file
+
+
+# Self-reflection
+- What parts of the code did Copilot help with?
+
+
+- Did you need to alter how you asked copilot the question?
+
+
+- Did you need to correct or improve any AI-generated code?
+
+
+- How confident are you in using AI for future coding tasks?
+
+
+- Do you feel that you need to have a basic understanding of a coding language before using an AI tool for specific tasks?
+
+
+ 
