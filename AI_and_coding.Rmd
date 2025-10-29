@@ -3,10 +3,7 @@ title: "AI and Coding"
 ---
 
 ```{r}
-library(Gviz)
 library(ggplot2)
-library(biomaRt)
-library(TxDb.Hsapiens.UCSC.hg38.knownGene)
 ```
 
 # Coding in R with Copilot Prompt
